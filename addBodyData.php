@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
 <?php
 /**
  * Created by PhpStorm.
@@ -6,13 +14,29 @@
  * Time: 13:38
  */
 
-class addBodyData
+include 'bodyData.php';
+include 'data.php';
+
+function AddData()
 {
+    $newBodyData = new bodyData($_POST["weight"] , $_POST["fedtprocent"]);
+
+    AddBodyData($newBodyData);
+
+
 
 }
 
 
 
 
+class addBodyData
+{
+
+
+}
 
 ?>
+
+</body>
+</html>

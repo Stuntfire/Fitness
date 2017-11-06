@@ -13,12 +13,17 @@ class bodyData
     public $weight;
     public $fedtprocent;
 
-    function __construct()
+    function __construct($weight, $fedtprocent)
     {
+        $this->weight = $weight;
+        $this->fedtprocent = $fedtprocent;
+    }
 
+    public function toString()
+    {
+        return $this->weight . " " . $this->fedtprocent;
     }
 }
-
 
 
 ?>

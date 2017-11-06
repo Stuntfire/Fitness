@@ -5,13 +5,19 @@
     <title>Title</title>
 </head>
 <body>
-
+<h2>Indtast data</h2>
 <form action="addBodyData.php" method="post">
-    Weight: <input type="number" name="weight">
-    Fedtprocent: <input type="number" name="fedtprocent">
+    Weight: <input type="number" name="weight"><br>
+    Fedtprocent: <input type="number" name="fedtprocent"><br>
     <input type="submit" value="Add Data">
 </form>
 
+<br>
+<form action="getBodyData.php" method="get">
+    Weight: <input type="number" name="weight"><br>
+    Fedtprocent: <input type="number" name="fedtprocent"><br>
+    <input type="submit" value="Get Data">
+</form>
 
 </body>
 </html>
