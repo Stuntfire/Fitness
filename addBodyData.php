@@ -7,28 +7,21 @@
 <body>
 
 <?php
-/**
- * Created by PhpStorm.
- * User: Søren Roed Schack
- * Date: 06-Nov-17
- * Time: 13:38
- */
 
 include 'bodyData.php';
 include 'data.php';
 
-function AddData()
-{
-    $newBodyData = new bodyData($_POST["weight"] , $_POST["fedtprocent"]);
+$b1 = $_POST['weight'];
+$b2 = $_POST['fedtprocent'];
 
-    AddBodyData($newBodyData);
+$newBodyData = new bodyData();
 
+$newBodyData->weight=$b1;
+$newBodyData->fedtprocent=$b2;
 
+AddBodyData($newBodyData);
 
-}
-
-
-
+echo "<br> Du indtastede... " . $newBodyData;
 
 class addBodyData
 {

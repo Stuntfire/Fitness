@@ -20,9 +20,12 @@
     include 'bodyData.php';
     include 'data.php';
 
-    $getList = array($_GET["weight"] , $_GET["fedtprocent"]);
+//    $getArray = array();
+//
+//    $get1 = $_GET['weight'];
+//    $get2 = $_GET['fedtprocent'];
 
-    display($getList);
+    display($_GET['array']);
 
     class getBodyData
     {
