@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,29 +7,16 @@
 <body>
 
     <?php
-    /**
-     * Created by PhpStorm.
-     * User: Søren Roed Schack
-     * Date: 06-Nov-17
-     * Time: 13:39
-     */
+        include 'bodyData.php';
+        include 'data.php';
 
-    include 'bodyData.php';
-    include 'data.php';
-
-//    $getArray = array();
-//
-//    $get1 = $_GET['weight'];
-//    $get2 = $_GET['fedtprocent'];
-
-    display($_GET['array']);
-
-    class getBodyData
-    {
-
-    }
-
+        //display() er en function fra 'data.php', der indlæser det gemte array.
+        display();
     ?>
 
+
+<h4>Dette er efter function display()... i getBodyData.php</h4>
+
+<div><a href="index.php">Indtast flere ... </a></div>
 </body>
 </html>

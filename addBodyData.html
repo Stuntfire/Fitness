@@ -1,3 +1,7 @@
+<?php
+// Start the session
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +11,9 @@
 <body>
 <h2>Indtast data</h2>
 <form action="addBodyData.php" method="post">
-    Weight: <input type="number" name="weight"><br>
-    Fedtprocent: <input type="number" name="fedtprocent"><br>
+
+    Weight: <input type="number" name="weight" required><br>
+    Fedtprocent: <input type="number" name="fedtprocent" required><br>
     <input type="submit" value="Add Data">
 </form>
 

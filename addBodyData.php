@@ -6,30 +6,29 @@
 </head>
 <body>
 
-<?php
+    <?php
 
-include 'bodyData.php';
-include 'data.php';
+        include 'bodyData.php';
+        include 'data.php';
 
-$b1 = $_POST['weight'];
-$b2 = $_POST['fedtprocent'];
+        $weight = $_POST['weight'];
+        $fedtprocent = $_POST['fedtprocent'];
 
-$newBodyData = new bodyData();
+        $newBodyData = new bodyData($weight, $fedtprocent);
 
-$newBodyData->weight=$b1;
-$newBodyData->fedtprocent=$b2;
+//        $newBodyData -> weight = $b1;
+//        $newBodyData -> fedtprocent = $b2;
 
-AddBodyData($newBodyData);
+        AddBodyData($newBodyData);
 
-echo "<br> Du indtastede... " . $newBodyData;
+        echo '<pre>', "<br> Du indtastede... " . $newBodyData , '</pre>';
 
-class addBodyData
-{
+    ?>
 
-
-}
-
-?>
+<p>
+<form action="getBodyData.php" method="get">
+    <input type="submit" value="Get Data">
+</form>
 
 </body>
 </html>
