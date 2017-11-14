@@ -1,14 +1,14 @@
 <?php
-
+session_start();
 //$_POST['array'] = array();
 
 
 
     function AddBodyData($newBodyData)
     {
-        $_SESSION = array();
+        $_SESSION['BodydataList'] = array();
 
-        array_push($_SESSION, $newBodyData);
+        array_push($_SESSION['BodydataList'], $newBodyData);
 
 
 //        echo "print_r result: <br>";
@@ -24,7 +24,7 @@
 
         // saving out.txt
         $file = '/out.txt';
-        file_put_contents($file, serialize($_SESSION)); // $_GET['array'] could be a response from a remote API.
+        file_put_contents($file, serialize($_SESSION['BodydataList'])); // $_GET['array'] could be a response from a remote API.
 
 
     }
